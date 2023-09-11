@@ -111,14 +111,12 @@ textarea {
    header .header-divider {
     width: 100%;
     height: 1px;
-    margin: 10px 0 0 20px;
+    margin: 10px 0 20px 0px;
     outline: 3px dotted blue;
    }
 
    header nav {
     width: 60%;
-    outline: 3px solid purple;
-    padding: 0 0 15px 0;
    }
 
    header nav ul {
@@ -144,12 +142,6 @@ textarea {
     margin-bottom: 50px;
    }
 
-   footer address {
-    margin: 0 0 50px 0;
-   }
-   footer h4 {
-    padding: 20px 0;
-   }
    footer .social-icons {
     display: flex;
     justify-content: space-around;
@@ -176,7 +168,6 @@ textarea {
     outline: 3px dashed cornflowerblue;
     display: flex;
     justify-content: center;
-    padding: 50px 0;
    }
 
    /* Aside */
@@ -184,42 +175,23 @@ textarea {
    aside {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
    }
 
-   aside h3 {
-    padding: 20px 0;
-   }
-
-   aside .form-description p {
-    padding: 0 0 30px 0;
-   }
-
-   aside .email {
-    padding: 1em;
-   }
-
-   aside .button {
-    padding: 20px 0;
-   }
-   /******Next step is getting 1em padding around the email input, 20px x2 in between, and 20px padding around button **/
    /* Features */
    .features {
-    padding: 50px 0;
     display: flex;
     justify-content: center;
    }
 
    .features h2 {
-    padding: 0 0 60px 0;
-    margin: 0;
+    margin: 0 0 60px 0;
    }
 
    .features .features-items {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
    }
 
    .features .fontawesome-icon {
@@ -232,6 +204,7 @@ textarea {
 
    .features article {
     width: 63%;
+    margin: 30px 0;
    }
 
    /*Reviews*/
@@ -239,11 +212,11 @@ textarea {
    .reviews {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
    }
 
-   /**.reviews h2 {
-   }**/
+   .reviews h2 {
+    margin-bottom: 40px;
+   }
 
    .reviews h3 {
     width: 50%;
@@ -376,9 +349,134 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+   @media only screen and (min-width: 768px) {
+     /*Tablet styles here*/
+     
+     .content-wrapper {
+      max-width: 640px;
+      margin: 100px 0;
+     }
+/**Tablet Homepage**/
+     /*Header*/
+     header {
+      padding: 33px 0;
+     }
+
+     header .content-wrapper {
+      width: 100%;
+      justify-content: space-between;
+     }
+
+     header nav {
+      width: 20%;
+     }
+
+     header nav ul {
+      justify-content: space-between;
+     }
+
+     .header-divider {
+      display: none;
+     }
+
+     /*Footer*/
+     footer .content-wrapper {
+      width: 65%;
+     }
+
+     .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
+
+     footer .contact {
+      margin-bottom: 0;
+     }
+
+     footer .copyright {
+      width: 100%;
+     }
+
+     /*Aside*/
+
+    aside .content-wrapper {
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-start;
+    }
+    aside .form-description, aside .form {
+      width: 40%;
+      margin: 0;
+    }
+
+
+     /*Features*/
+
+     .features article {
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 50%;
+      outline: 3px dashed green;
+     }
+
+     .features .features-item-description {
+      width: 50%;
+     }
+
+     /*Reviews*/
+
+     .reviews article {
+      display: flex;
+      justify-content: space-between;
+     }
+     .reviews article div {
+      width: 49%;
+     }
+
+     /**About**/
+  .mission-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 20px;
+  }
+
+  .mission-content p {
+      width: 45%;
+  }
+
+  .contact-section .content-wrapper h2 {
+      width: 80%;
+  }
+
+  .contact-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
 }
+
+
+     /**FAQ**/
+
+     .faq .content-wrapper {
+      justify-content: space-between;
+     }
+
+     .faq-content {
+      flex-basis: 45%;
+     }
+    
+     .faq h2 {
+      width: 100%;
+     }
+
+   }
+   @media only screen and (min-width: 1200px) {
+     /*Desktop styles here*/
+   }
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
